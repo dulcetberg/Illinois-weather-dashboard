@@ -35,6 +35,11 @@ server=app.server
 app.layout = html.Div([
     html.H1("Illinois Live Weather Map & Spatial Dashboard", 
             style={'textAlign': 'center', 'fontFamily': 'Arial, sans-serif'}),
+
+    # ADDED: Your Name Subtitle Line
+    html.H3("Created by Brian Bergstrom", 
+            style={'textAlign': 'center', 'fontFamily': 'Arial, sans-serif', 'color': '#555555', 'marginTop': '0px', 'marginBottom': '20px'}),
+    
     
     html.Div([
         # Main Map Component
