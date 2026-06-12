@@ -75,11 +75,11 @@ def update_weather_map(n):
         df, lat="Latitude", lon="Longitude", hover_name="City",
         hover_data={"Humidity (%)": True, "Precipitation Probability (%)": True, "Latitude": False, "Longitude": False},
         color="Precipitation Probability (%)", size="Humidity (%)",
-        color_continuous_scale=px.colors.sequential.Blues, size_max=30, zoom=6,
+        color_continuous_scale=px.colors.sequential.YlOrRd, size_max=30, zoom=6,
         center={"lat": 40.6331, "lon": -89.3985},
         title="Live Regional Matrix (Bubble Size = Humidity | Bubble Darkness = Rain Chance)"
     )
-    map_fig.update_layout(map_style="open-street-map", margin={"r":0,"t":40,"l":0,"b":0}, height=500)
+    map_fig.update_layout(map_style="cart-darkmatter", margin={"r":0,"t":40,"l":0,"b":0}, height=500)
     
     # Subgraph Generations
     humidity_fig = px.bar(df, x='City', y='Humidity (%)', color='City', template='plotly_white')
