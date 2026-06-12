@@ -79,7 +79,7 @@ def update_weather_map(n):
         center={"lat": 40.6331, "lon": -89.3985},
         title="Live Regional Matrix (Bubble Size = Humidity | Bubble Darkness = Rain Chance)"
     )
-    map_fig.update_layout(map_style="cart-darkmatter", margin={"r":0,"t":40,"l":0,"b":0}, height=500)
+    map_fig.update_layout(map_style="carto-darkmatter", margin={"r":0,"t":40,"l":0,"b":0}, height=500)
     
     # Subgraph Generations
     humidity_fig = px.bar(df, x='City', y='Humidity (%)', color='City', template='plotly_white')
